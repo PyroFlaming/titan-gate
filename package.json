@@ -1,0 +1,25 @@
+{
+    "name": "titan-gate",
+    "version": "0.0.0",
+    "main": "main.js",
+    "author": "Pavel Kostadinov",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "start": "webpack --watch --mode=development",
+        "build": "webpack"
+    },
+    "dependencies": {
+        "bundle-loader": "^0.5.6",
+        "global": "^4.4.0",
+        "path": "^0.12.7",
+        "webpack-cli": "^3.3.11"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.10.2",
+        "@babel/preset-env": "^7.10.2",
+        "babel-loader": "^8.1.0",
+        "file-loader": "^6.0.0",
+        "webpack": "^4.43.0"
+    }
+}

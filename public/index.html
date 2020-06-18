@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+            crossorigin="anonymous"
+        />
+        <link href="./style/all.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="style/style.css" />
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark flex-column align-items-stretch">
+                <div class="d-flex">
+                    <a class="navbar-brand" href="/">Calendar</a>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <button id="addNewEvent" type="button" class="btn btn-primary">Add new</button>
+                        <button id="refresh-events" type="button" class="btn btn-primary">Refresh</button>
+                    </div>
+                    <div id="calendar-search">
+                        <div class="input-group">
+                            <input
+                                id="calendar-search-input"
+                                typeAheadSearch="eventSearch"
+                                typeAheadFilterFunction="filterEvents"
+                                type="text"
+                                class="form-control"
+                            />
+                        </div>
+                        <ul id="calendar-search-suggestions"></ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="container-fluid">
+            <section class="row">
+                <div class="col-12 py-3">
+                    <button type="button" calendarPrev class="btn btn-light"><i class="fas fa-chevron-left"></i></button>
+                    <span calendarTitle> </span>
+                    <button type="button" calendarNext class="btn btn-light"><i class="fas fa-chevron-right"></i></button>
+
+                    <button type="button" currentMonth class="btn btn-light">Today</button>
+                </div>
+                <div class="col-12">
+                    <div calendarHolder id="calendar"></div>
+                </div>
+            </section>
+
+            <section class="row pt-5">
+                <div class="col-12"><h5>City search</h5></div>
+                <div class="col-12 d-flex justify-content-center">
+                    <div>
+                        <div id="city-search-holder" class="input-group">
+                            <input
+                                id="city-search"
+                                typeAheadSearch="cityData"
+                                typeAheadFilterFunction="filterCity"
+                                type="text"
+                                class="form-control"
+                            />
+                            <ul id="city-search-suggestions"></ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section style="height: 300px;"></section>
+        </main>
+
+        <script src="./bundle.js"></script>
+    </body>
+</html>
