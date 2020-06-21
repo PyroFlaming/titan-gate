@@ -47,6 +47,11 @@ export class CitySearch {
     }
 
     eventListeners() {
+        this.searchInput.focus = (event) => {
+            console.log(event);
+
+        }
+
 
         this.searchInput.addEventListener('focus', event => {
             this.printSuggestions(event.autoCompleteResult);
