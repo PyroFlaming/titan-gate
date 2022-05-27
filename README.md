@@ -11,3 +11,6 @@
     -   use `yarn start`/`npm start` to watch for changes.
 
 -   Open the public folder from browser.
+
+
+## Used fireship for comunication.
